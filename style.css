@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Sketch&display=swap');
+
+html {
+    background-color: #b9fff6;
+}
+
+h1 {
+    font-family: 'Londrina Sketch', cursive;
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    position: relative;
+    border: 2px solid black;
+    margin: auto;
+}
+
+#buttons {
+    padding: 30px;
+    padding-top: 0;
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#buttons button {
+    font-size: 20px;
+    margin: 10px;
+    margin-top: 0;
+    padding: 5px 20px;
+    border-radius: 6px;
+    background-color: #b9fff6;
+    box-shadow: 3px 1px 5px;
+    border: 1px solid #b9fff6;
+}
+
+#buttons button:hover {
+    background-color: #9ffff2;
+    border: 1px solid #9ffff2;
+}
