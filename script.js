@@ -46,8 +46,19 @@ function makeGrid(dimensions) {
 
 makeGrid(dimensions);
 
-const reset = document.getElementById("reset");
-reset.addEventListener("click", function () {
+// Creates initial box
+
+const boxList = document.querySelectorAll(".box");
+boxList.forEach(function(box) {
+    box.addEventListener("mouseover", function(e) {
+        e.target.style.backgroundColor = "rgb(0, 153, 255)";
+    });
+});
+
+// Blue button event listener
+
+const blue = document.getElementById("blue");
+blue.addEventListener("click", function () {
     makeGrid(dimensions);
 
     const boxList = document.querySelectorAll(".box");
@@ -57,6 +68,22 @@ reset.addEventListener("click", function () {
         });
     });
 });
+
+// Black button event listener
+
+const black = document.getElementById("black");
+black.addEventListener("click", function () {
+    makeGrid(dimensions);
+
+    const boxList = document.querySelectorAll(".box");
+    boxList.forEach(function(box) {
+        box.addEventListener("mouseover", function(e) {
+            e.target.style.backgroundColor = "black";
+        });
+    });
+});
+
+// Random color button event listener
 
 const randomColor = document.getElementById("random");
 randomColor.addEventListener("click", function () {
@@ -74,10 +101,3 @@ randomColor.addEventListener("click", function () {
         });
     });
 });
-
-const boxList = document.getElementsByClassName("box");
-for(let i = 0; i < boxList.length; i++) {
-    boxList[i].addEventListener("mouseover", function(e) {
-        e.target.style.backgroundColor = "rgb(0, 153, 255)";
-    });
-}
