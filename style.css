@@ -4,11 +4,14 @@ html {
     background-color: #b9fff6;
 }
 
+body {
+    margin-top: 0;
+}
+
 h1 {
     font-family: 'Londrina Sketch', cursive;
     text-align: center;
     font-size: 50px;
-    padding-bottom: 10px;
     margin: 0;
     text-transform: uppercase;
 }
@@ -25,7 +28,7 @@ h1 {
     padding-top: 0;
     display: block;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 #buttons button {
@@ -44,4 +47,12 @@ h1 {
     border: 1px solid #9ffff2;
     box-shadow: 3px 1px 8px;
     transition-duration: 0.2s;
+}
+
+p {
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
 }

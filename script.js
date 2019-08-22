@@ -3,7 +3,7 @@ let dimensions = 16, resetCheck = false;
 
 function makeGrid(dimensions) {
     if (resetCheck == true) {
-        dimensions = Number(prompt("Set dimensions"));
+        dimensions = Number(prompt("How many number of boxes per per line do you want?"));
         
         grid.innerHTML = "";
 
@@ -52,6 +52,7 @@ const boxList = document.querySelectorAll(".box");
 boxList.forEach(function(box) {
     box.addEventListener("mouseover", function(e) {
         e.target.style.backgroundColor = "rgb(0, 153, 255)";
+        e.target.style.borderColor = "rgb(0, 153, 255)";
     });
 });
 
@@ -65,6 +66,7 @@ blue.addEventListener("click", function () {
     boxList.forEach(function(box) {
         box.addEventListener("mouseover", function(e) {
             e.target.style.backgroundColor = "rgb(0, 153, 255)";
+            e.target.style.borderColor = "rgb(0, 153, 255)";
         });
     });
 });
@@ -79,6 +81,7 @@ black.addEventListener("click", function () {
     boxList.forEach(function(box) {
         box.addEventListener("mouseover", function(e) {
             e.target.style.backgroundColor = "black";
+            e.target.style.borderColor = "black";
         });
     });
 });
@@ -98,6 +101,7 @@ randomColor.addEventListener("click", function () {
             let b = Math.floor(Math.random()*100);
             
             e.target.style.backgroundColor = "rgb(" + r + "%," + g + "%," + b + "%)";
+            e.target.style.borderColor = "rgb(" + r + "%," + g + "%," + b + "%)";
         });
     });
 });
