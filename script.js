@@ -3,7 +3,7 @@ let dimensions = 16, resetCheck = false;
 
 function makeGrid(dimensions) {
     if (resetCheck == true) {
-        dimensions = prompt("Set dimensions");
+        dimensions = Number(prompt("Set dimensions"));
         
         grid.innerHTML = "";
 
@@ -44,35 +44,35 @@ function makeGrid(dimensions) {
     }
 }
 
+makeGrid(dimensions);
+
 const reset = document.getElementById("reset");
 reset.addEventListener("click", function () {
     makeGrid(dimensions);
 
-    const boxList = document.getElementsByClassName("box");
-    for(let i = 0; i < boxList.length; i++) {
-        boxList[i].addEventListener("mouseover", function(e) {
+    const boxList = document.querySelectorAll(".box");
+    boxList.forEach(function(box) {
+        box.addEventListener("mouseover", function(e) {
             e.target.style.backgroundColor = "rgb(0, 153, 255)";
         });
-    }
+    });
 });
-
-makeGrid(dimensions);
 
 const randomColor = document.getElementById("random");
 randomColor.addEventListener("click", function () {
     makeGrid(dimensions);
 
-    const boxList = document.getElementsByClassName("box");
+    const boxList = document.querySelectorAll(".box");
 
-    for(let i = 0; i < boxList.length; i++) {
-        let r = Math.floor(Math.random()*100);
-        let g = Math.floor(Math.random()*100);
-        let b = Math.floor(Math.random()*100);
-        
-        boxList[i].addEventListener("mouseover", function(e) {
+    boxList.forEach(function(box) {
+        box.addEventListener("mouseover", function(e) {
+            let r = Math.floor(Math.random()*100);
+            let g = Math.floor(Math.random()*100);
+            let b = Math.floor(Math.random()*100);
+            
             e.target.style.backgroundColor = "rgb(" + r + "%," + g + "%," + b + "%)";
         });
-    }
+    });
 });
 
 const boxList = document.getElementsByClassName("box");
